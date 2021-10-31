@@ -144,7 +144,7 @@ function string.split(str, delim)
 	end
 	local n = 1
 	while true do
-		local i, j = find(str, delim, n)
+		local i, j = find(str, delim, n, true)
 		if not i then break end
 		insert(ret, sub(str, n, i - 1))
 		n = j + 1
